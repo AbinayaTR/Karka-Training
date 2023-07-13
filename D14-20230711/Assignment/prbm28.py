@@ -1,5 +1,6 @@
 cur_keychain=0
 tax=8.25/100
+price=10
 base_shipping=5
 per_keychain_shipping=1
 def add_keychains(keychain):
@@ -18,7 +19,7 @@ def remove_keychains(keychain):
         print(f"You now have {cur_keychain} keychains")
     return keychain
 def view_order():
-    return f"You have {cur_keychain} keychains.\nKeychains cost $10 per each.\nShipping charges on the order {base_shipping}.\n"
+    return f"You have {cur_keychain} keychains.\nKeychains cost $10 per each.\nShipping charges on the order {base_shipping}.Total cost before tax {price*cur_keychain}.cost after tax is {price*tax}.\n"
 def checkout():
     global cur_keychain
     name=input("What is your name? ")
