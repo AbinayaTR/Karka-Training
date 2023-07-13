@@ -1,5 +1,5 @@
 #integer to string
-a=
+a=1
 a=str(a)
 print(type(a))
 # string to integer
