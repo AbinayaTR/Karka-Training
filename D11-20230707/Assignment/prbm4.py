@@ -1,0 +1,8 @@
+msg=print("Please enter the following information so i can sell it for a profit!\n")
+first_name=input("First name : ")
+last_name=input("Last name : ")
+grade=input("Grade (9-12) : ")
+stud_id=int(input("Student ID : "))
+login=input("Login : ")
+gpa=float(input("GPA (0.0-4.0) : "))
+print("\nYour information:\n\t Login:\t{}\n\t ID:\t{}\n\t Name:\t{}\n\t GPA:\t{}\n\t Grade:\t{}".format(login,stud_id,first_name,gpa,grade))
