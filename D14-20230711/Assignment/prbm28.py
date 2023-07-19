@@ -19,17 +19,17 @@ def remove_keychains(keychain):
         print(f"You now have {cur_keychain} keychains")
     return keychain
 def view_order():
-    return f"You have {cur_keychain} keychains.\nKeychains cost $10 per each.\nShipping charges on the order {base_shipping}.Total cost before tax {price*cur_keychain}.cost after tax is {price*tax}.\n"
-def checkout():
-    global cur_keychain
+    return f"You have {cur_keychain} keychains.\nKeychains cost $10 per each.\nShipping charges on the order {base_shipping}.Total cost before tax {price*cur_keychain}.cost after tax is {(price*cur_keychain)*tax}.\n"
+def checkout(keychain):
+    # global cur_keychain
     name=input("What is your name? ")
     return f"You have {cur_keychain} keychains.\nKeychains cost $10 per each.\nTotal cost is {cur_keychain*price}\nThanks for your order, {name}"
 print("Ye Olde Keychain Shoppe\n\n1. Add Keychains to Order \n2. Remove Keychains from Order \n3. View Current Order \n4. Checkout")
 while True:
     choice=int(input("Please enter your choice : "))
     if choice==4:
-        result=checkout()
-        print(result)
+        cur_keychain=checkout(cur_keychain)
+        print(cur_keychain)
         break
     elif choice==3:
         result=view_order()
