@@ -51,8 +51,15 @@ for key,details in my_resume.items():
     elif type(details)==dict:
         print(f"{key}\t:")
         for key,dicts in details.items():
-            print(f"\t{key}\t:{dicts}")
-            # if type(dicts)==dict:
+            # print(f"\t{key}\t:{dicts}")
+            if type(dicts)==dict:
+                print(f"\t{key}\t:")
+                for key,dic in dicts.items():
+                    print(f"\t\t{key}\t:{dic}")
+            if type(dicts)==str:
+                print(f"\t\t{key}\t:\t{dicts}")
+            if type(dicts)==list:
+                
                 
 
             
